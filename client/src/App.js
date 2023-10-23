@@ -24,7 +24,7 @@ function App() {
           <Route index element={<HomeComponent />} />
           <Route path="register" element={<RegisterComponent />} />
           <Route
-            path="login"
+            path="/login"
             element={
               <LoginComponent
                 currentUser={currentUser}
@@ -33,7 +33,7 @@ function App() {
             }
           />
           <Route
-            path="profile"
+            path="/profile"
             element={
               <ProfileComponent
                 currentUser={currentUser}
@@ -42,7 +42,7 @@ function App() {
             }
           />
           <Route
-            path="course"
+            path="/course"
             element={
               <CourseComponent
                 currentUser={currentUser}
@@ -51,7 +51,7 @@ function App() {
             }
           />
           <Route
-            path="postCourse"
+            path="/postCourse"
             element={
               <PostCourseComponent
                 currentUser={currentUser}
@@ -60,7 +60,7 @@ function App() {
             }
           />
           <Route
-            path="enroll"
+            path="/enroll"
             element={
               <EnrollComponent
                 currentUser={currentUser}
