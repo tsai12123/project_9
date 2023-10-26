@@ -22,7 +22,7 @@ function App() {
           }
         >
           <Route index element={<HomeComponent />} />
-          <Route path="register" element={<RegisterComponent />} />
+          <Route path="/register" element={<RegisterComponent />} />
           <Route
             path="login"
             element={
