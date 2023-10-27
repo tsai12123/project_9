@@ -128,7 +128,6 @@ http://localhost:8080/
 
 </details>
 
-...
 
 ## 與我聯絡
 - [郵件](mailto:zx8989123@gmail.com)
