@@ -42,7 +42,6 @@ const loginValidation = (data) => {
     }),
   });
 
-
   return schema.validate(data);
 };
 
@@ -53,7 +52,7 @@ const courseValidation = (data) => {
       "string.max": "課程標題長度不能超過 {#limit} 個字元",
       "any.required": "課程標題為必填欄位",
     }),
-    description: Joi.string().min(6).max(50).required().messages({
+    description: Joi.string().min(6).max(1000).required().messages({
       "string.min": "課程描述長度至少為 {#limit} 個字元",
       "string.max": "課程描述長度不能超過 {#limit} 個字元",
       "any.required": "課程描述為必填欄位",
