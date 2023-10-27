@@ -48,7 +48,9 @@ const CourseComponent = ({ currentUser, setCurrentUser }) => {
         console.log(e);
       });
   };
-
+  const handlechange = (courseId) => {
+    navigate(`/edlit/${courseId}`);
+  };
   return (
     <div style={{ padding: "3rem" }}>
       {!currentUser && (
