@@ -85,7 +85,10 @@ npm install
 ### 運行專案
 
 ```bash
-npm run serve
+cd client
+npm start
+cd server
+nodemon server.js
 ```
 
 ### 開啟專案
