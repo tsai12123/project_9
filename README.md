@@ -105,10 +105,30 @@ nodemon server.js
 http://localhost:8080/
 ```
 
-## 環境變數說明
+## 專案技術
 
-```env
-APIPATH= # API 位置
-COUSTOMPATH= # 自訂變數
+- Node.js v20.7.0
+- bcrypt v5.1.0
+- cors v2.8.5
+- Axios v1.1.3
+- Bootstrap v5.1.3
+- express v4.18.2
+- joi v17.6.3
+- mongoose v6.6.6
+- mongodb v4.9.1
+<details>
+
+<summary>jsonwebtoken v8.5.1</summary>
+
+1. 用戶登錄成功後，伺服器生成一個 JWT，其中包含有關用戶的信息。
+2. 伺服器將 JWT 返回給客戶端，通常存儲在客戶端的 Cookie 或本地存儲中。
+3. 客戶端在後續的請求中將 JWT 包含在請求標頭中。
+4. 伺服器接收到請求後，驗證 JWT 的簽名，確保它是有效且未被修改。
+5. 如果 JWT 驗證成功，伺服器使用其中的信息來授權用戶並執行請求。
+
+</details>
+
 ...
-```
+
+## 與我聯絡
+- [郵件](mailto:zx8989123@gmail.com)
