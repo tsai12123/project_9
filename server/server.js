@@ -24,7 +24,7 @@ mongoose
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-app.use(express.static(path.join(__dirname, "client", "bulid")));
+app.use(express.static(path.join(__dirname, "client", "public")));
 
 app.use("/api/user", authRoute);
 
@@ -39,7 +39,7 @@ if (
   process.env.NODE_ENV === "staging"
 ) {
   app.get("/*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build ", "index.html"));
+    res.sendFile(path.join(__dirname, "client", "public ", "index.html"));
   });
 }
 
