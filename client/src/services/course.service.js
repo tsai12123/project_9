@@ -52,6 +52,21 @@ class CourseService {
     });
   }
 
+  getTitle() {
+    let token;
+    if (localStorage.getItem("user")) {
+      token = JSON.parse(localStorage.getItem("user")).token;
+    } else {
+      token = "";
+    }
+
+    return axios.get(API_URL + "/", {
+      headers: {
+        Authorization: token,
+      },
+    });
+  }
+
   getCourseByName(name) {
     let token;
     if (localStorage.getItem("user")) {
@@ -85,6 +100,22 @@ class CourseService {
       }
     );
   }
+
+  chang(_id, updatedCourseData) {
+    let token;
+    if (localStorage.getItem("user")) {
+      token = JSON.parse(localStorage.getItem("user")).token;
+    } else {
+      token = "";
+    }
+
+    return axios.patch(API_URL + "/" + _id, updatedCourseData, {
+      headers: {
+        Authorization: token,
+      },
+    });
+  }
+
   delete(_id) {
     let token;
     if (localStorage.getItem("user")) {
