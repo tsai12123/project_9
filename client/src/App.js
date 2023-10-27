@@ -9,6 +9,7 @@ import AuthService from "./services/auth.service";
 import CourseComponent from "./components/course-component";
 import PostCourseComponent from "./components/postCourse-component";
 import EnrollComponent from "./components/enroll-component";
+import EdlitComponent from "./components/edit-component";
 import "./styles/styles.css";
 function App() {
   let [currentUser, setCurrentUser] = useState(AuthService.getCurrentUser());
@@ -69,6 +70,15 @@ function App() {
             }
           />
         </Route>
+        <Route
+          path="edlit/:courseId"
+          element={
+            <EdlitComponent
+              currentUser={currentUser}
+              setCurrentUser={setCurrentUser}
+            />
+          }
+        ></Route>
       </Routes>
     </BrowserRouter>
   );
