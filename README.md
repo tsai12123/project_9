@@ -72,3 +72,34 @@ Node.js 版本建議為：`16.15.0` 以上...
 ```bash
 https://github.com/tsai12123/project_9
 ```
+### 安裝套件
+
+```bash
+npm install
+```
+
+### 環境變數設定
+
+請在終端機輸入 `cp .env.example .env` 來複製 .env.example 檔案，並依據 `.env` 內容調整相關欄位。
+
+### 運行專案
+
+```bash
+npm run serve
+```
+
+### 開啟專案
+
+在瀏覽器網址列輸入以下即可看到畫面
+
+```bash
+http://localhost:8080/
+```
+
+## 環境變數說明
+
+```env
+APIPATH= # API 位置
+COUSTOMPATH= # 自訂變數
+...
+```
