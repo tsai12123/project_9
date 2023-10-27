@@ -86,8 +86,14 @@ npm install
 
 ```bash
 cd client
+```
+```bash
 npm start
+```
+```bash
 cd server
+```
+```bash
 nodemon server.js
 ```
 
