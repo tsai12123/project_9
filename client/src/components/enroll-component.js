@@ -116,6 +116,7 @@ const EnrollComponent = ({ currentUser, setCurrentUser }) => {
               </div>
             );
           })}
+          <hr style={{ borderTop: "10px solid black" }} />
         </div>
       )}
       {currentUser && courseData && courseData.length !== 0 && (
