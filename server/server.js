@@ -24,11 +24,10 @@ mongoose
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-app.use(express.static(path.join(__dirname, "bulid")));
+app.use(express.static(path.join(__dirname, "client", "bulid")));
 
 app.use("/api/user", authRoute);
-// course route應該被jwt保護
-// 如果request header內部沒有jwt，則request就會被視為是unauthorized
+
 app.use(
   "/api/courses",
   passport.authenticate("jwt", { session: false }),
@@ -40,7 +39,7 @@ if (
   process.env.NODE_ENV === "staging"
 ) {
   app.get("/*", (req, res) => {
-    res.sendFile(path.join(__dirname, "build ", "index.html"));
+    res.sendFile(path.join(__dirname, "client", "build ", "index.html"));
   });
 }
 
