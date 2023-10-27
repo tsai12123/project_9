@@ -92,14 +92,26 @@ const CourseComponent = ({ currentUser, setCurrentUser }) => {
                   <p style={{ margin: "0.5rem 0rem" }}>
                     課程價格: {course.price}
                   </p>
+                  <p>
+                    {currentUser && currentUser.user.role === "instructor" && (
+                      <button
+                        style={{ margin: "0.5rem 0rem" }}
+                        type="button"
+                        className="btn btn-primary"
+                        onClick={() => handledelete(course._id)}
+                      >
+                        刪除課程
+                      </button>
+                    )}
+                  </p>
                   {currentUser && currentUser.user.role === "instructor" && (
                     <button
                       style={{ margin: "0.5rem 0rem" }}
                       type="button"
                       className="btn btn-primary"
-                      onClick={() => handledelete(course._id)}
+                      onClick={() => handlechange(course._id)}
                     >
-                      刪除課程
+                      更新課程
                     </button>
                   )}
                 </div>
