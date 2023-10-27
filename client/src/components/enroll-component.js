@@ -6,9 +6,25 @@ const EnrollComponent = ({ currentUser, setCurrentUser }) => {
   const navigate = useNavigate();
   let [searchInput, setSearchInput] = useState("");
   let [searchResult, setSearchResult] = useState(null);
+  const [courseData, setCourseData] = useState(null);
+
   const handleTakeToLogin = () => {
     navigate("/login");
   };
+
+  useEffect(() => {
+    if (currentUser) {
+      if (currentUser.user.role == "student") {
+        CourseService.getTitle()
+          .then((data) => {
+            setCourseData(data.data);
+          })
+          .catch((e) => {
+            console.log(e);
+          });
+      }
+    }
+  }, []);
 
   const handleChangeInput = (e) => {
     setSearchInput(e.target.value);
@@ -96,6 +112,42 @@ const EnrollComponent = ({ currentUser, setCurrentUser }) => {
                   >
                     註冊課程
                   </a>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+      {currentUser && courseData && courseData.length !== 0 && (
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
+          {courseData.map((course) => {
+            return (
+              <div
+                className="card"
+                style={{ width: "18rem", margin: "1rem" }}
+                key={course._id}
+              >
+                <div className="card-body">
+                  <h5 className="card-title">課程名稱: {course.title}</h5>
+                  <p style={{ margin: "0.5rem 0rem" }} className="card-text">
+                    {course.description}
+                  </p>
+                  <p style={{ margin: "0.5rem 0rem" }}>
+                    學生人數: {course.students.length}
+                  </p>
+                  <p style={{ margin: "0.5rem 0rem" }}>
+                    課程價格: {course.price}
+                  </p>
+                  <p>
+                    <a
+                      href="#"
+                      id={course._id}
+                      className="card-text btn btn-primary"
+                      onClick={handleEnroll}
+                    >
+                      註冊課程
+                    </a>
+                  </p>
                 </div>
               </div>
             );
