@@ -5,7 +5,7 @@
 
 ## 畫面
 
-![專案封面圖](./image/p1.jpg)
+![專案封面圖](./image/p1.png)
 
 * [線上觀看連結](https://project-9-frontend.onrender.com/)
   
@@ -43,23 +43,23 @@
 
 - 學生註冊課程
 
-![註冊封面圖](./image/p2.jpg)
+![註冊封面圖](./image/p2.png)
 
 - 學生課程頁面
 
-![註冊封面圖](./image/p3.jpg)
+![註冊封面圖](./image/p3.png)
 
 -講師新增課程
 
-![講師新增課程封面圖](./image/p4.jpg)
+![講師新增課程封面圖](./image/p4.png)
 
 - 講師課程新增課程後頁面
 
-![講師課程頁面封面圖](./image/p5.jpg)
+![講師課程頁面封面圖](./image/p5.png)
 
 - 講師更改課程頁面
 
-![講師更改課程頁面封面圖](./image/p6.jpg)
+![講師更改課程頁面封面圖](./image/p6.png)
   
 ## 安裝
 
