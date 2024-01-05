@@ -7,8 +7,6 @@ const authRoute = require("./routes").auth;
 const courseRoute = require("./routes").course;
 const passport = require("passport");
 require("./config/passport")(passport);
-const cors = require("cors");
-const path = require("path");
 
 // 連結MongoDB
 mongoose
@@ -24,7 +22,6 @@ mongoose
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-app.use(express.static(path.join(__dirname, "client", "build")));
 
 app.use("/api/user", authRoute);
 
@@ -33,10 +30,6 @@ app.use(
   passport.authenticate("jwt", { session: false }),
   courseRoute
 );
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
 
 const port = process.env.PORT || 8080;
 
