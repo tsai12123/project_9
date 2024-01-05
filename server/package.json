@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "build": "npm install",
-    "start": "node server.js"
+    "start": "node server.js",
+    "start-with-mongo": "node server-with-mongo.js"
   },
   "author": "",
   "license": "ISC",
